@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+Reset and Base Styles
 * {
   margin: 0;
   padding: 0;
@@ -158,7 +158,7 @@ nav.nav-menu ul li a:hover::after {
 .social-icons a {
   font-size: 18px;
   padding: 10px;
-  background: rgb(223, 191, 191);
+  background:  rgb(223, 191, 191);
   color: black;
   border-radius: 5px;
   text-decoration: none;
@@ -204,7 +204,7 @@ nav.nav-menu ul li a:hover::after {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
-  color: rgb(210, 51, 83);
+  color:  rgb(210, 51, 83);
   margin-bottom: 40px;
 }
 
@@ -283,51 +283,42 @@ nav.nav-menu ul li a:hover::after {
   text-align: right;
 }
 
-/* ------------------------------ */
-/* ⭐⭐ NEW RESPONSIVE PROJECT GRID ⭐⭐ */
-/* ------------------------------ */
-
+/* Projects */
 .project-section {
-  padding: 60px 20px;
+  padding: 60px 20px; /* reduced left/right padding */
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 350px); /* fixed width for equal cards */
+  justify-content: center; /* center grid */
+  gap: 20px; /* reduced gap between cards */
 }
 
 .project-card {
+  width: 350px; /* fixed width for all cards */
   background-color: #fffaf8;
   border: 2px solid black;
   padding: 20px;
-  border-radius: 12px;
-  text-align: center;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
+  text-align: center;
 }
 
 .project-card img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 60%;
   border-radius: 6px;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
-.project-card img:hover {
-  transform: scale(1.06);
-}
-
 .project-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+.project-card img:hover {
+  transform: scale(1.1); /* Zoom in by 10% */
 }
 
 .project-card p {
@@ -354,8 +345,9 @@ nav.nav-menu ul li a:hover::after {
 
 .footer-social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center social icons */
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-social-icons a {
@@ -375,6 +367,7 @@ nav.nav-menu ul li a:hover::after {
 
 .contact-btn {
   margin-top: 20px;
+  margin-left: 6px;
   display: inline-block;
   background-color: rgb(210, 51, 83);
   color: white;
@@ -382,7 +375,7 @@ nav.nav-menu ul li a:hover::after {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -408,6 +401,7 @@ nav.nav-menu ul li a:hover::after {
   width: 620px;
   max-width: 90%;
   text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -436,10 +430,11 @@ nav.nav-menu ul li a:hover::after {
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .send-btn:hover {
-  background: rgb(180, 40, 70);
+  background:  rgb(210, 51, 83);
 }
 
 @keyframes fadeIn {
@@ -447,16 +442,41 @@ nav.nav-menu ul li a:hover::after {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 1024px) {
-  .intro-container { flex-direction: column; text-align: center; }
-  .text-content { padding-left: 0; }
-  .skills-container { flex-direction: column; }
-  .skills-image { justify-content: center; }
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-left: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-image {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .projects-grid {
+    justify-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
+  .hamburger {
+    display: flex;
+  }
 
   nav.nav-menu {
     display: none;
@@ -479,9 +499,52 @@ nav.nav-menu ul li a:hover::after {
     display: block;
   }
 
-  main { padding: 120px 20px 20px 20px; text-align: center; }
+  main {
+    padding: 120px 20px 20px 20px;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-left: 0;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-image {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .project-section {
+    padding: 30px 15px; /* smaller padding for tablets */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-btn {
+    margin-left: 0;
+    display: block;
+    margin: 20px auto 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
-  .contact-btn { margin-left: 0; }
+  .projects-grid {
+    grid-template-columns: 100%; /* one card per row on small screens */
+  }
+
+  .project-card {
+    width: 100%;
+  }
 }
