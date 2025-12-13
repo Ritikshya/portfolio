@@ -310,6 +310,7 @@ nav.nav-menu ul li a:hover::after {
   text-decoration: none;
 }
 
+
 .project-card:hover {
   transform: translateY(-5px);
 }
@@ -337,6 +338,19 @@ nav.nav-menu ul li a:hover::after {
   color: #333;
   line-height: 1.6;
 }
+/* View Project link color */
+.project-card h4 a {
+  color: rgb(210, 51, 83);   /* your theme pink/red */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.project-card h4 a:hover {
+  color: #000;              /* black on hover */
+}
+
 
 /* Footer */
 .site-footer {
