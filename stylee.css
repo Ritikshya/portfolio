@@ -341,7 +341,7 @@ nav.nav-menu ul li a:hover::after {
 /* View Project link color */
 .project-card h4 a {
   color: rgb(210, 51, 83);   /* your theme pink/red */
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 600;
   transition: color 0.3s ease;
 }
