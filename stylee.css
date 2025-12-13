@@ -305,10 +305,10 @@ nav.nav-menu ul li a:hover::after {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease;
 }
-.project-card a {
+/* .project-card a {
   color: rgb(210, 51, 83);
   text-decoration: none;
-}
+} */
 
 
 .project-card:hover {
