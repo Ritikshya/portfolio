@@ -282,6 +282,10 @@
     <section class="project-section" id="project">
       <h2 class="section-title">My Projects</h2>
       <div class="projects-grid">
+        <div class="view-more-container">
+  <button id="viewMoreBtn">View More</button>
+</div>
+
          <div class="project-card">
           <img src="new3.jpg" alt="Portfolio">
           <h3>Real Estate CRM </h3>
@@ -322,7 +326,7 @@ on efficient data entry, clear hierarchy, and scalable backend workflows.</p>
             and demo-driven onboarding using clear hierarchy and SaaS best practices.</p>
           <h4><a href="https://www.figma.com/proto/xuy4DjFx43ECcYcXmSqC7a/Ritssz-s-team-library?node-id=3594-359&t=z6zc11duTkYJid5y-1&scaling=min-zoom&content-scaling=fixed&page-id=3529%3A2&starting-point-node-id=4083%3A308"  target="_blank">View Project</a></h4>
         </div>
-         <div class="project-card">
+         <div class="project-card hidden-project">
           <img src="project1.jpg" alt="HMS">
           <h3>Modern Furnishings E-commerce Concept</h3>
           <p>A deep-dive into creating a clean, sophisticated visual design for an online furniture retailer.
@@ -333,7 +337,7 @@ on efficient data entry, clear hierarchy, and scalable backend workflows.</p>
         </div>
         
        
-         <div class="project-card">
+         <div class="project-card hidden-project">
           <img src="business Card.jpg" alt="CMS">
           <h3>Business Card Mock Up</h3>
           <p>I designed this business card for a cafe and restaurant using the client’s reference.
@@ -341,7 +345,7 @@ The goal was to create a clean, attractive layout with clear contact details.
 This project helped me practice layout, typography, and branding fundamentals.</p>
           <h4><a href="business Card.jpg" target="_blank">View Photo</a></h4>
         </div>
-        <div class="project-card">
+        <div class="project-card hidden-project">
           <img src="pf.png" alt="Portfolio">
           <h3>Portfolio</h3>
           <p>Personal portfolio design with responsive layout using Html,Css and JavaScript.</p>
@@ -389,6 +393,19 @@ This project helped me practice layout, typography, and branding fundamentals.</
       successMsg.style.display = "block";
       form.reset();
     });
+
+  // View More Projects
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const hiddenProjects = document.querySelectorAll(".hidden-project");
+
+  viewMoreBtn.addEventListener("click", () => {
+    hiddenProjects.forEach(project => {
+      project.style.display = "block";
+    });
+    viewMoreBtn.style.display = "none";
+  });
+
+
   </script>
 </body>
 </html>
