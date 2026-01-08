@@ -282,9 +282,7 @@
     <section class="project-section" id="project">
       <h2 class="section-title">My Projects</h2>
       <div class="projects-grid">
-        <div class="view-more-container">
-  <button id="viewMoreBtn">View More</button>
-</div>
+  
 
          <div class="project-card">
           <img src="new3.jpg" alt="Portfolio">
@@ -351,6 +349,10 @@ This project helped me practice layout, typography, and branding fundamentals.</
           <p>Personal portfolio design with responsive layout using Html,Css and JavaScript.</p>
         </div>
       </div>
+      <div class="view-more-container">
+  <button id="toggleProjectsBtn">View More</button>
+</div>
+
     </section>
   </main>
 
@@ -395,15 +397,27 @@ This project helped me practice layout, typography, and branding fundamentals.</
     });
 
   // View More Projects
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+  const toggleBtn = document.getElementById("toggleProjectsBtn");
   const hiddenProjects = document.querySelectorAll(".hidden-project");
 
-  viewMoreBtn.addEventListener("click", () => {
+  let expanded = false;
+
+  toggleBtn.addEventListener("click", () => {
+    expanded = !expanded;
+
     hiddenProjects.forEach(project => {
-      project.style.display = "block";
+      project.style.display = expanded ? "block" : "none";
     });
-    viewMoreBtn.style.display = "none";
+
+    toggleBtn.textContent = expanded ? "View Less" : "View More";
+
+    if (!expanded) {
+      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+    }
   });
+
+
 
 
   </script>
